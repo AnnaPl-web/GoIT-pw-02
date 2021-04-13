@@ -1,0 +1,46 @@
+:root {
+  --main-text-color: #212121;
+  --accent-text-color: #2196f3;
+  --link-text-color: #757575;
+}
+body {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+.logo {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+.logo-web {
+  color: var(--accent-text-color);
+}
+.list {
+  list-style: none;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-text-color);
+}
+.link.current {
+  color: var(--accent-text-color);
+}
+.auth-nav .link:hover,
+.auth-nav .link:focus {
+  color: var(--accent-text-color);
+}
+.site-nav .link {
+  color: var(--main-text-color);
+}
+.auth-nav .link {
+  color: var(--link-text-color);
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
