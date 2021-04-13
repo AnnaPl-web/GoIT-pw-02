@@ -2,6 +2,8 @@
   --main-text-color: #212121;
   --accent-text-color: #2196f3;
   --link-text-color: #757575;
+  --secondary-background: #2f303a;
+  --white-text-color: #ffffff;
 }
 body {
   color: var(--main-text-color);
@@ -13,16 +15,24 @@ body {
 }
 .logo-web {
   color: var(--accent-text-color);
+  text-decoration: none;
 }
 .list {
   list-style: none;
+}
+.list .list-color {
+  color: var(--link-text-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-text-color);
 }
-.link.current {
+.link-current {
   color: var(--accent-text-color);
+  text-decoration: none;
+}
+.page-header .link {
+  text-decoration: none;
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
@@ -34,6 +44,27 @@ body {
 .auth-nav .link {
   color: var(--link-text-color);
 }
+
+/* .section-grey { - В футере логотип 
+  остается подчеркнутым
+  text-decoration: none;
+} */
+
+.footer-auth {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.section-grey.title {
+  color: var(--white-text-color);
+  text-decoration: none;
+}
+
+.button {
+  background-color: var(--accent-text-color);
+  color: var(--white-text-color);
+  border-radius: 4px;
+}
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -43,4 +74,8 @@ body {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
+}
+/* Footer */
+.section-grey {
+  background-color: var(--secondary-background);
 }
