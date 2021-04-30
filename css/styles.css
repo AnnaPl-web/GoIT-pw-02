@@ -50,7 +50,7 @@ body {
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 /* Шапка */
 .header,
@@ -59,7 +59,9 @@ body {
   align-items: center;
   padding: 0;
 }
-
+.border {
+  border: 1px solid #ececec;
+}
 .auth-nav .item:first-child {
   /* margin-left: 331px; */
 }
@@ -124,12 +126,20 @@ body {
 }
 
 /* Секция 1 */
+.hero {
+  background-image: url(../images/bcg-img/Img-bg.jpg);
+  background-image: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
+}
+
+.hero-section {
+  padding-bottom: 94px;
+}
+
 .container.hero {
   max-width: 1600px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--secondary-background);
@@ -150,18 +160,19 @@ body {
   margin-bottom: 30px;
 }
 /* Секция 2 */
+.features {
+  padding-bottom: 94px;
+}
 
-.container.features {
+.list-features {
   display: flex;
-  /* padding: 0; */
-  margin-bottom: 94px;
-  outline: 2px solid tomato;
+  padding: 0;
 }
 .features .item:not(:last-child) {
   margin-right: 30px;
 }
 .features-title {
-  /* margin: 0; */
+  margin: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -173,7 +184,7 @@ body {
 }
 .features-text {
   padding: 0;
-  /* margin: 0; */
+  margin: 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
@@ -187,6 +198,7 @@ body {
 .work {
   text-align: center;
   padding-top: 0;
+  padding-bottom: 94px;
 }
 .work-title {
   padding: 0;
@@ -201,16 +213,14 @@ body {
 .work .list {
   display: flex;
 }
-.pictures {
-  padding-bottom: 94px;
-}
+
 .work .pictures:not(:last-child) {
   margin-right: 30px;
 }
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 /* Секция 4 */
@@ -219,7 +229,7 @@ img {
 }
 .team {
   background-color: var(--bg-button-color);
-  margin-bottom: 94px;
+  padding-bottom: 94px;
   padding-top: 0;
   text-align: center;
 }
@@ -238,8 +248,7 @@ img {
 }
 
 .team .pictures-team {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
 }
@@ -285,19 +294,18 @@ img {
   border: none;
   padding: 6px 22px;
   background-color: var(--bg-button-color);
-  /* min-width: 128px; - у всех разные, надо ли?*/
-  /* border: 1px solid transparent; - Репета 1.43 */
 }
 .button.current {
   background-color: var(--accent-text-color);
   color: var(--white-text-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button:hover,
 .button:focus {
   background-color: var(--accent-text-color);
   color: var(--bg-button-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .button.primary {
   background: var(--accent-text-color);
@@ -380,54 +388,50 @@ img {
 
 /* Portfolio */
 
-.btn {
-  margin-top: 94px;
-  outline: 2px solid tomato;
+.portfolio {
+  padding-top: 94px;
 }
+.portfolio .list {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
 .list-btn:not(:last-child) {
   margin-right: 8px;
 }
-
-/* Карточки Портфолио */
-.card-item:not(:nth-last-child(3n)) {
-  margin: 30px;
-}
-/* .card-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px; */
-/* }
-
-/* .card-thumb:nth-child(3n) {
-  margin-right: 0;
-} */
-
-.card-set {
-  padding: 0;
-  margin: 0;
+.card {
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
-
-.card-item {
-  outline: 2px solid tomato;
-  border: 1px solid #eeeeee;
-  width: calc (100% - 60px /3);
+.card-set {
+  flex-basis: calc((100%-30px) / 3);
+  max-width: 370px;
+  max-height: 404px;
+  margin-left: 30px;
+  margin-top: 30px;
+  justify-content: center;
 }
-.card-thumb {
-  margin-bottom: 20px;
-}
-.card-content {
-  outline: 2px solid tomato;
-  text-align: left;
+.card-info {
+  margin: 0;
+  flex-direction: column;
   padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
-/* Текстовая наполняемость */
+/* Текстовая наполняемость карточек */
 
-.portfolio .list {
+.list-btn {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 94px;
 }
 
 .portfolio-title {
@@ -436,7 +440,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
 .portfolio-text {
@@ -447,3 +451,4 @@ img {
   line-height: 1.87;
   color: var(--link-text-color);
 }
+/* Для загрузки свг: под ли - ссілка - в ссілке - свг2-юс-в юс ейчреф-точка,слеш,название - №название свг(может отличаться, смотрим в свг файле имя) */
