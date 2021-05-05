@@ -1,11 +1,6 @@
 html {
   box-sizing: border-box;
 }
-/* *,
-*::after,
-*::before {
-  box-sizing: inherit;
-} */
 
 :root {
   --main-text-color: #212121;
@@ -17,6 +12,9 @@ html {
   --button-primary-shadow: rgba(0, 0, 0, 0.15);
   --footer-auth-color: rgba(255, 255, 255, 0.6);
   --card-distance: 30px;
+  --color-svg: #afb1b8;
+  --footer-svg-bcg: rgba(255, 255, 255, 0.1);
+  --card-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 body {
@@ -53,6 +51,9 @@ body {
   /* outline: 2px solid tomato; */
 }
 /* Шапка */
+.header-border {
+  border: 1px solid #ececec;
+}
 .header,
 .nav {
   display: flex;
@@ -61,9 +62,6 @@ body {
 }
 .border {
   border: 1px solid #ececec;
-}
-.auth-nav .item:first-child {
-  /* margin-left: 331px; */
 }
 
 .list {
@@ -86,9 +84,7 @@ body {
 .auth-nav .item:first-child {
   margin-right: 50px;
 }
-/* .site-nav .item:last-child, */
-.auth-nav .item {
-}
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-text-color);
@@ -112,6 +108,8 @@ body {
   display: block;
 }
 .auth-nav .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--link-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -127,8 +125,8 @@ body {
 
 /* Секция 1 */
 .hero {
-  background-image: url(../images/bcg-img/Img-bg.jpg);
-  background-image: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bcg-img/Img-bg.jpg);
 }
 
 .hero-section {
@@ -168,9 +166,10 @@ body {
   display: flex;
   padding: 0;
 }
-.features .item:not(:last-child) {
+.item-features:not(:last-child) {
   margin-right: 30px;
 }
+
 .features-title {
   margin: 0;
   font-weight: 700;
@@ -273,11 +272,36 @@ img {
 .team-text {
   padding: 0;
   margin: 0;
+  margin-bottom: 16px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   color: var(--link-text-color);
+}
+
+/* Секция 5 Клиенты */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-title {
+  margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--main-text-color);
 }
 
 /* Кнопки */
@@ -347,11 +371,19 @@ img {
 }
 
 /* Footer */
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--secondary-background);
 }
+.footer-inform {
+  margin-right: 70px;
+}
+.footer-main {
+  display: flex;
+}
+
 .footer-logo {
   display: block;
   margin: 0;
@@ -386,6 +418,51 @@ img {
   line-height: 1.71;
 }
 
+/* Футер правая часть */
+
+.join-content {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 11px;
+}
+.join-title {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.join-item {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.join-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--white-text-color);
+  background: var(--footer-svg-bcg);
+}
+.join-item .list:not(:last-child) {
+  margin-right: 10px;
+}
+.join-link:hover,
+.join-link:focus {
+  background: var(--accent-text-color);
+}
+
 /* Portfolio */
 
 .portfolio {
@@ -416,6 +493,9 @@ img {
   margin-left: 30px;
   margin-top: 30px;
   justify-content: center;
+  background: var(--white-text-color);
+  border: 1px solid #eeeeee;
+  box-shadow: var(--card-box-shadow);
 }
 .card-info {
   margin: 0;
@@ -451,4 +531,74 @@ img {
   line-height: 1.87;
   color: var(--link-text-color);
 }
-/* Для загрузки свг: под ли - ссілка - в ссілке - свг2-юс-в юс ейчреф-точка,слеш,название - №название свг(может отличаться, смотрим в свг файле имя) */
+
+/* Svg иконки */
+.features-svg {
+  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  background: var(--bg-button-color);
+}
+
+.svg-bcg {
+  width: 270px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.auth-nav .link:hover .svg-nav,
+.auth-nav .link:focus .svg-nav {
+  fill: var(--accent-text-color);
+}
+.svg-nav {
+  display: flex;
+  padding: 0;
+  margin-right: 10px;
+  max-width: 100%;
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-text-color);
+  border-color: var(--accent-text-color);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--color-svg);
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.link-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  fill: var(--color-svg);
+}
+.svg-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.link-svg:hover,
+.link-svg:focus {
+  fill: var(--white-text-color);
+  background-color: var(--accent-text-color);
+}
+
+.svg-team:not(:last-child) {
+  margin-right: 10px;
+}
